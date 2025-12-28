@@ -1,0 +1,24 @@
+﻿{
+  "name": "jami-dusu-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "granite dev",
+    "build": "granite build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@apps-in-toss/framework": "latest",
+    "@granite-js/react-native": "latest",
+    "@toss/seed": "latest",
+    "react": "18.2.0",
+    "react-native": "0.72.4"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-native": "latest",
+    "typescript": "latest"
+  }
+}
