@@ -49,8 +49,16 @@ def convert_lunar_to_solar(
     return SolarDate(year=solar_year, month=solar_month, day=solar_day)
 
 
-def get_lunar_date(year: int, month: int, day: int, is_lunar: bool) -> LunarDate:
+def get_lunar_date(
+    year: int,
+    month: int,
+    day: int,
+    is_lunar: bool,
+    is_intercalation: bool = False,
+) -> LunarDate:
     """입력 날짜를 음력으로 정규화한다."""
     if is_lunar:
-        return LunarDate(year=year, month=month, day=day, is_intercalation=False)
+        return LunarDate(
+            year=year, month=month, day=day, is_intercalation=is_intercalation
+        )
     return convert_solar_to_lunar(year, month, day)
